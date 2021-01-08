@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    //id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation "joda-time:joda-time:2.2"
+    testImplementation "junit:junit:4.12"
+}
+
+jar {
+    archiveBaseName = 'gs-gradle'
+    archiveVersion =  '0.1.0'
+}
+
+apply plugin: 'application'
+
+mainClassName = 'hello.HelloWorld'
